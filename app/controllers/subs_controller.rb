@@ -81,6 +81,7 @@ class SubsController < ApplicationController
   end
   def new
     @sub = Sub.new
+    render partial: 'form'
     # render new.html.erb
   end
   def create
@@ -93,6 +94,7 @@ class SubsController < ApplicationController
   end
   def edit
     @sub = Sub.find(params[:id])
+    render partial: 'form'
     # render edit.html.erb edit form
   end
   def update
